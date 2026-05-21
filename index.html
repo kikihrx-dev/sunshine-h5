@@ -72,21 +72,9 @@
   .open-form { flex:0 0 auto; text-decoration:none; padding:11px 18px; border-radius:999px; color:#fff; font-weight:900; font-size:14px; background:linear-gradient(135deg,#FF9F3F,#FF6D77); box-shadow:0 8px 20px rgba(255,109,119,.45); animation:pulse-btn 1.8s ease-in-out infinite; }
   @keyframes pulse-btn { 0%,100%{transform:scale(1);box-shadow:0 8px 20px rgba(255,109,119,.45);} 50%{transform:scale(1.07);box-shadow:0 12px 28px rgba(255,109,119,.65);} }
   .form-fallback { margin-top:10px; padding:10px 12px; border-radius:18px; background:#FFF6DD; color:#7A5B0A; font-size:13px; line-height:1.6; font-weight:700; }
-  .fpc { display:block; text-decoration:none; border-radius:20px; overflow:hidden; background:#fff; margin:16px 0 8px; box-shadow:0 2px 20px rgba(60,130,80,.10), 0 0 0 1.5px rgba(101,199,138,.18); }
-  .fpc-header { background:linear-gradient(150deg,#edfaf3 0%,#d8f2e6 100%); position:relative; overflow:hidden; padding:14px 18px 18px; }
-  .fpc-header svg { position:absolute; bottom:0; left:0; right:0; width:100%; }
-  .fpc-tag { display:inline-block; background:rgba(255,255,255,.75); border-radius:999px; padding:3px 10px; font-size:11px; color:#3a7a52; font-weight:800; letter-spacing:.2px; margin-bottom:10px; backdrop-filter:blur(6px); }
-  .fpc-name { font-size:17px; font-weight:900; color:#1b3d28; letter-spacing:-.3px; position:relative; z-index:1; }
-  .fpc-body { padding:8px 16px 4px; }
-  .fpc-row { padding:11px 0; border-bottom:1px solid #f2f2f2; }
-  .fpc-row:last-child { border-bottom:none; }
-  .fpc-qlabel { font-size:13px; font-weight:700; color:#222; margin-bottom:7px; }
-  .fpc-qlabel em { color:#e0251a; font-style:normal; margin-right:2px; font-size:11px; }
-  .fpc-input-mock { background:#f7f8fa; border:1px solid #ebebeb; border-radius:8px; padding:9px 13px; color:#c8c8c8; font-size:13px; }
-  .fpc-opts { display:flex; flex-direction:column; gap:8px; }
-  .fpc-opt { display:flex; align-items:center; gap:9px; color:#666; font-size:13px; }
-  .fpc-dot { width:15px; height:15px; border-radius:50%; border:1.5px solid #d5d5d5; flex-shrink:0; background:#fff; }
-  .fpc-go { margin:14px 16px 16px; padding:14px; background:linear-gradient(135deg,#3D8ED8 0%,#65C78A 100%); border-radius:13px; color:#fff; font-weight:900; font-size:15px; text-align:center; letter-spacing:.5px; }
+  .form-frame-wrap { width:100%; height:720px; border-radius:24px; overflow:hidden; background:#fff; border:2px solid rgba(61,142,216,.16); box-shadow:inset 0 0 0 1px rgba(255,255,255,.65); }
+  .form-frame-wrap iframe { width:100%; height:100%; border:0; display:block; background:#fff; }
+  .form-fallback a { color:#2B71B7; font-weight:950; text-decoration:none; }
 
 </style>
 </head>
@@ -156,43 +144,10 @@
           </div>
           <a class="open-form" href="https://docs.qq.com/form/page/DVHRCTXp3SFJidHp2" target="_blank" rel="noopener">打开表单</a>
         </div>
-        <a class=”fpc” href=”https://docs.qq.com/form/page/DVHRCTXp3SFJidHp2” target=”_blank” rel=”noopener”>
-          <div class=”fpc-header”>
-            <svg viewBox=”0 0 400 56” preserveAspectRatio=”none” xmlns=”http://www.w3.org/2000/svg” style=”height:56px”>
-              <path d=”M0 56 C60 30 110 48 170 36 C230 24 270 44 330 28 L400 18 L400 56 Z” fill=”rgba(101,199,138,.28)”/>
-              <path d=”M0 56 C80 36 140 50 200 40 C260 30 310 46 370 32 L400 26 L400 56 Z” fill=”rgba(80,180,110,.45)”/>
-              <path d=”M260 56 C290 38 320 28 355 18 C375 10 392 22 400 14 L400 56 Z” fill=”rgba(50,150,80,.72)”/>
-            </svg>
-            <div class=”fpc-tag”>📋 收集表</div>
-            <div class=”fpc-name”>GoGoREAD订阅接龙</div>
-          </div>
-          <div class=”fpc-body”>
-            <div class=”fpc-row”>
-              <div class=”fpc-qlabel”><em>*</em>01 姓名</div>
-              <div class=”fpc-input-mock”>未填写</div>
-            </div>
-            <div class=”fpc-row”>
-              <div class=”fpc-qlabel”>02 在读中心</div>
-              <div class=”fpc-opts”>
-                <div class=”fpc-opt”><span class=”fpc-dot”></span>时代Life中心</div>
-                <div class=”fpc-opt”><span class=”fpc-dot”></span>亦庄龙湖中心</div>
-                <div class=”fpc-opt”><span class=”fpc-dot”></span>海淀华宇中心</div>
-              </div>
-            </div>
-            <div class=”fpc-row”>
-              <div class=”fpc-qlabel”><em>*</em>03 联系方式</div>
-              <div class=”fpc-input-mock”>未填写</div>
-            </div>
-            <div class=”fpc-row”>
-              <div class=”fpc-qlabel”><em>*</em>04 是否交费</div>
-              <div class=”fpc-opts”>
-                <div class=”fpc-opt”><span class=”fpc-dot”></span>已交</div>
-                <div class=”fpc-opt”><span class=”fpc-dot”></span>待交</div>
-              </div>
-            </div>
-          </div>
-          <div class=”fpc-go”>点击进入表单填写 →</div>
-        </a>
+        <div class=”form-frame-wrap”>
+          <iframe src=”https://docs.qq.com/form/page/DVHRCTXp3SFJidHp2” title=”阳光少年报全年订阅腾讯表单” loading=”lazy” allowfullscreen></iframe>
+        </div>
+        <div class=”form-fallback”>如果表单未能在当前页面正常显示，请点击右上角”打开表单”进入填写。</div>
       </div>
     </section>
     <div class="sticky-cta"><a href="https://docs.qq.com/form/page/DVHRCTXp3SFJidHp2" target="_blank" rel="noopener" style="display:block;width:100%;height:50px;border:0;border-radius:16px;background:linear-gradient(135deg,#3D8ED8,#65C78A);color:#fff;font-weight:950;font-size:16px;text-decoration:none;display:flex;align-items:center;justify-content:center;">立即填写腾讯表单</a></div>
